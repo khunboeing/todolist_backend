@@ -20,7 +20,7 @@ AppRoutes.map((route) => {
   );
 });
 
-app.listen(process.env.PORT || 4000, async () => {
+app.listen(process.env.PORT || 4002, async () => {
   await db.connect();
   console.log(`Sever start on port ${process.env.PORT}`);
 });
