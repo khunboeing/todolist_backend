@@ -9,6 +9,10 @@ const app: Application = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 AppRoutes.map((route) => {
   app[route.method as keyof Application](
     route.path,
@@ -16,7 +20,7 @@ AppRoutes.map((route) => {
   );
 });
 
-app.listen(4000, async () => {
+app.listen(process.env.PORT || 4000, async () => {
   await db.connect();
-  console.log("Sever start on port 4000");
+  console.log(`Sever start on port ${process.env.PORT}`);
 });
