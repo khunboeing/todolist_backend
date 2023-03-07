@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
-    "start": "ts-node -r tsconfig-paths/register src/index.ts"
+    "start": "ts-node src/index.ts"
   },
   "dependencies": {
     "@types/cors": "^2.8.13",
